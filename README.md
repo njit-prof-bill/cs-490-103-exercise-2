@@ -6,18 +6,18 @@ In this exercise, you will demonstrate your understanding of Git and GitHub by f
 ## Instructions
 
 ### Step 1: Fork the Repository
-- Fork this repository to your own GitHub account by clicking the **Fork** button in the upper right corner. *Note* if you change the name of your repository, then you will need to use your repo name instead of `source-code-management-exercise` when following the examples below.
+- Fork this repository to your own GitHub account by clicking the **Fork** button in the upper right corner. *Note* if you change the name of your repository, then you will need to use your repo name instead of `cs-490-103-exercise-2` when following the examples below.
 
 ### Step 2: Clone Your Fork
 - Clone the forked repository to your local machine. Open your terminal and run the following command:
   ```bash
-  git clone https://github.com/<your-github-username>/source-code-management-exercise.git
+  git clone https://github.com/<your-github-username>/cs-490-103-exercise-2.git
   ```
 
 ### Step 3: Create a New Branch
 - Create a new branch to work on your feature. Name your branch `<ucid>-gcd-feature` where <ucid> is your student ucid (`wfm8`). Example commands:
   ```bash
-  cd source-code-management-exercise
+  cd cs-490-103-exercise-2
   git checkout -b <ucid>-gcd-feature
   ```
 
@@ -74,7 +74,7 @@ print(gcd(101, 10))  # Expected output: 1
 When choosing repositories and branches, the GitHub screen will look something like:
 
 ```
-base repository: [njit-prof-bill/source-code-man...][base: main] <- [head repository: iambillmccann/source-code-man...][compare: wfm8-gdc-feature]
+base repository: [njit-prof-bill/cs-490-103-exercise-2][base: main] <- [head repository: iambillmccann/cs-490-103-exercise-2][compare: wfm8-gdc-feature]
 ```
 
 ---
