@@ -1,5 +1,7 @@
 def gcd(a: int, b: int) -> int:
-    # for dealing with cases where b > a
+    if min(a, b) <= 0:
+        return None
+    
     r = a % b
     if not r:
         return b
