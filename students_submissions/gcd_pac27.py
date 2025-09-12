@@ -1,6 +1,13 @@
 def gcd(a: int, b: int) -> int:
-    if min(a, b) <= 0:
+    if a < b:
+        return gcd(b, a)
+    elif b < 0:
         return None
+    elif b == 0:
+        if a > 0:
+            return a
+        else:
+            return None
     
     r = a % b
     if not r:
