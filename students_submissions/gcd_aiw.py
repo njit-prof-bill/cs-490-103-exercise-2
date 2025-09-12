@@ -21,5 +21,5 @@ def gcd(a: int, b: int) -> int:
         return small
     
 
-    return gcd(big,big%small)
+    return gcd(small,big%small)
 
