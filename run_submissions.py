@@ -8,11 +8,18 @@ def run_gcd_test(gcd_func, a, b, expected):
     """
     Runs a test case for the gcd function.
     """
-    result = gcd_func(a, b)
-    if result == expected:
-        print(f"PASS: gcd({a}, {b}) = {result}")
-    else:
-        print(f"FAIL: gcd({a}, {b}) = {result}, expected {expected}")
+    try:
+        result = gcd_func(a, b)
+        if result == expected:
+            print(f"PASS: gcd({a}, {b}) = {result}")
+        else:
+            print(f"FAIL: gcd({a}, {b}) = {result}, expected {expected}")
+    except ZeroDivisionError:
+        print(f"FAIL: gcd({a}, {b}) raised ZeroDivisionError")
+    except RecursionError:
+        print(
+            f"FAIL: gcd({a}, {b}) raised RecursionError (maximum recursion depth exceeded)"
+        )
 
 
 def load_and_run():
@@ -61,11 +68,12 @@ def load_and_run():
                 isprime  # Add isprime to the global namespace
             )
             print(f"Running {module_name}'s submission...")
-            # run_gcd_test(gcd_func, 54, 24, 6)
-            # run_gcd_test(gcd_func, 48, 18, 6)
-            # run_gcd_test(gcd_func, 101, 10, 1)
-            # run_gcd_test(gcd_func, 270, 192, 6)
+            run_gcd_test(gcd_func, 54, 24, 6)
+            run_gcd_test(gcd_func, 48, 18, 6)
+            run_gcd_test(gcd_func, 101, 10, 1)
+            run_gcd_test(gcd_func, 270, 192, 6)
             # Edge case test cases
+            print(f"Running {module_name}'s edge case tests...")
             run_gcd_test(gcd_func, 0, 0, None)  # Both numbers are zero
             run_gcd_test(gcd_func, -54, 24, 6)  # One negative number
             run_gcd_test(gcd_func, 54, -24, 6)  # One negative number
